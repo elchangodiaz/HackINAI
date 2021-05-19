@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0;
+}
+.body2 {
+    margin: auto;
+    margin-top: 0%;
+    width: 80vw;
+}
+
+.header {
+    position: absolute;
+}
+
+.header img {
+    position: absolute;
+    top: 0;
+    object-fit: contain;
+    object-position: center;
+    height: 350px;
+    width: 80vw;
+}
+
+.navbar {
+    position: relative;
+    background-color: #c52293;
+    height: 60px;
+    top: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background-color: black;
+    width: 15%;
+    display: flex;
+}
+
+.navbar a {
+    justify-self: center;
+    display: block;
+    width: 80vw;
+}
+
+.navbar img {
+    height: 80%;
+    margin: 6px auto auto 2.5%;
+}
+
+.navbar p {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin-right: 40%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    position: relative;
+    margin: auto;
+    margin-top: 500px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.theader {
+    background-color: rgb(143, 173, 255);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+@media (max-width: 1440px) {
+    .body2 {
+        margin-top: 0%;
+        width: 100vw;
+    }
+    .header img {
+        width: 100vw;
+    }
+    .navbar img {
+        height: 70%;
+        margin: .3% auto auto 3vw;
+    }
+}
