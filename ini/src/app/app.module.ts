@@ -4,6 +4,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SalariosComponent } from './components/salarios/salarios.component';
+import {MatSelectModule} from '@angular/material/select';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { SalariosComponent } from './components/salarios/salarios.component';
     BrowserModule,
     //HttpModule,
     //HttpClient,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
