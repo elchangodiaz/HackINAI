@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        label {
+            font-family: 'Open Sans', sans-serif;
+            margin: 10px;
+        }
+        
+        select {
+            /* border-radius: 5px; */
+            color: rgb(133, 133, 133);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            height: 40px;
+            border: 0px;
+            border-bottom: 1px solid rgb(184, 184, 184);
+            padding: 10px;
+        }
 
 .salario{
   position: relative;

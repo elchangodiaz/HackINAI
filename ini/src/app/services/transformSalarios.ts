@@ -1,3 +1,5 @@
+//Esta clase sólo recoge los datos obtenidos del csv y los separa en un arreglo
+
 import {Injectable} from '@angular/core';
 
 @Injectable({
@@ -8,8 +10,7 @@ export class TransformSalario{
   registros:any[]= [];
   constructor(){}
   transform( texto:string[]){
-    console.log('Datos en array');
-    this.registros.push([]);
+    //this.registros.push([]);
     texto.forEach((e: string)=> {//para cada elemento separamos por comas y guardamos todo en un arreglo
       let campos = e.split(',');
       this.registros.push(campos);
