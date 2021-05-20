@@ -18,10 +18,6 @@ export class SalariosComponent implements OnInit {
     this.getcsv.getInfo(this.urlTrimestre).subscribe(infos =>{
       const list = infos.split('\n');
       this.data = this.t.transform(list);
-      /*list.forEach(e =>{
-        let temp = e.split(',');
-        this.data.push(temp);
-      })*/
     })
 
     

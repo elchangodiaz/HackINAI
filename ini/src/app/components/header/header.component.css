@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-body {
+.body2 {
     margin: auto;
     margin-top: 0%;
     width: 80vw;
@@ -25,12 +25,16 @@ body {
     height: 350px;
     width: 80vw;
 }
+.espacio{
+    width: 80vw;
+}
 
 .navbar {
     background-color: #c52293;
     height: 60px;
     display: flex;
     justify-content: space-between;
+    width: 80vw;
 }
 
 .logo {
@@ -81,12 +85,15 @@ td {
 }
 
 @media (max-width: 1440px) {
-    body {
+    .body2 {
         margin-top: 0%;
         width: 100vw;
     }
     .header img {
         width: 100vw;
+    }
+    .navbar{
+        width: 100%;
     }
     .navbar img {
         height: 70%;
