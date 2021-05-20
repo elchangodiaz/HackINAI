@@ -11,6 +11,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {FormsModule} from '@angular/forms';
 import { SalarioPuestoComponent } from './components/salario-puesto/salario-puesto.component';
 import { map, delay } from "rxjs/operators";
+import { FiltradoUbicacionComponent } from './components/filtrado-ubicacion/filtrado-ubicacion.component';
+import {ChartsModule} from 'n2g-charts';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { map, delay } from "rxjs/operators";
     MapComponent,
     TableComponent,
     NavBarComponent,
-    SalarioPuestoComponent
+    SalarioPuestoComponent,
+    FiltradoUbicacionComponent
 
   ],
   imports: [

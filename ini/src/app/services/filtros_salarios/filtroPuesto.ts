@@ -55,7 +55,7 @@ export class FiltroPuesto {
         texto.forEach((e: string) => {//para cada elemento separamos por comas y guardamos todo en un arreglo
             let indice;
             let temp = parseInt(String(e[16]).replace(/['"]+/g, ''));
-            if (Number(e[16]) >= 100000) {
+            if (temp>= 100000) {
                 indice = 0;
             } else if (temp >= 90000) {
                 indice = 1;
@@ -72,7 +72,6 @@ export class FiltroPuesto {
             } else if (temp >= 30000) {
                 indice = 7;
             } else if (temp >= 20000) {
-                console.log('-----------------------------')
                 indice = 8;
             } else if (temp  >= 10000) {
                 indice = 9;

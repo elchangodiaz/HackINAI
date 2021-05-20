@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { getCsv } from '../../services/getCsv';
 import { TransformSalario } from '../../services/transformSalarios';
 import { FiltroPuesto } from 'src/app/services/filtros_salarios/filtroPuesto';
-import { rendererTypeName } from '@angular/compiler';
+import {FiltroUbicacion} from 'src/app/services/filtros_salarios/filtroUbicacion';
 
 @Component({
   selector: 'app-salarios',
@@ -17,7 +17,7 @@ export class SalariosComponent implements OnInit {
   porAlcaldia: Map<string, number>[] = [];
   selected = 'puestos';
   urlTrimestre = 'https://raw.githubusercontent.com/Erick2G/Hack2021/main/csvs/primer_trim_concurso.csv';
-  constructor(private getcsv: getCsv, private t: TransformSalario, private filtro: FiltroPuesto) { }
+  constructor(private getcsv: getCsv, private t: TransformSalario, private filtro: FiltroPuesto, private filtroUbicacion: FiltroUbicacion) { }
 
   ngOnInit(): void {
     this.prepararData();
@@ -33,12 +33,6 @@ export class SalariosComponent implements OnInit {
         console.log('This runs after.');
       }, 5000);
     });
-
-    //this.salario.transformarDatos(this.data);
-    /* if (this.data.length > 1) {
-       this.segundoPaso();
-     }*/
-
   }
 
   getData() {
@@ -47,9 +41,10 @@ export class SalariosComponent implements OnInit {
 
   segundoPaso() {
     this.temp = this.filtro.transform(this.data);
-    this.porAlcaldia = this.temp[0];
-    this.numeroPuestos = this.temp[1];
-    this.nombresPuestos = this.temp[2];
+  }
+
+  segundoPasoUbicacion() {
+    this.temp = this.filtroUbicacion.transform(this.data);
   }
 
 
