@@ -12,7 +12,7 @@ import {FormsModule} from '@angular/forms';
 import { SalarioPuestoComponent } from './components/salario-puesto/salario-puesto.component';
 import { map, delay } from "rxjs/operators";
 import { FiltradoUbicacionComponent } from './components/filtrado-ubicacion/filtrado-ubicacion.component';
-import {ChartsModule} from 'n2g-charts';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import {ChartsModule} from 'n2g-charts';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [SalarioPuestoComponent],
   bootstrap: [AppComponent]

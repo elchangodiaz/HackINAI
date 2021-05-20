@@ -1,6 +1,7 @@
 <h1>Relación Salario - Puestos</h1>
-
-<table>
+<div class="conteneor">
+<div class="tabla">
+    <table>
     <tr>
         <td class="theader">SALDO DE LOS PUESTOS</td>
         <td class="theader">SALARIO </td>
@@ -14,9 +15,22 @@
 
 
 </table>
+</div>
+<div class="grafica" style = 'display: block'>
+    <canvas
+    baseChart
+    [data]="Data"
+    [labels]="Labels"
+    [chartType] = "doughnutChartType"
 
+    >
+    </canvas>
+
+</div>
+</div>
+<!--
 <script>
-    window.onload = function() {
+   /* window.onload = function() {
 
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
@@ -53,13 +67,13 @@
             }]
         });
         chart.render();
-
+*/
     }
 </script>
 
 <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;">asdad</div>
 <script src="../../../canvasjs.min.js"></script>
-<!--
+
    <div *ngFor="let d of numeroPuestos">
     <p>{{d}}</p>
 
