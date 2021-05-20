@@ -19,7 +19,7 @@ public class ServiceImpl implements IService{
 	
 	public String[] getCsv() {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("A121Fr47A_Ingresos-recibidos_1676_Parte_1.csv").getFile());
+        File file = new File(classLoader.getResource("A121Fr53_Obra-publica-o-servicios_20751_Parte_1.csv").getFile());
 		
 		
 		try {
