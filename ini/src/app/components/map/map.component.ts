@@ -36,7 +36,7 @@ export class MapComponent implements OnInit {
     this.crearMarcador(-99.08035733146752, 19.33965037386581);
     this.crearMarcador(-99.20388094081645, 19.284932466282896);
     this.crearMarcador(-99.16102581104256, 19.365813329506835);
-
+    this.crearMarcadorMovil(-99.11250892774515, 19.237103775296646);
 
   }
 
@@ -92,7 +92,22 @@ export class MapComponent implements OnInit {
 
   crearMarcador(lngM: number, latM: number) {
     const marker = new mapboxgl.Marker({
-      draggable: true
+      draggable: false
+    })
+        .setLngLat([lngM, latM])
+        .addTo(this.map);
+
+        marker.on('drag', () => {
+            console.log(marker.getLngLat()
+            )
+        })
+
+  }
+
+  crearMarcadorMovil(lngM: number, latM: number) {
+    const marker = new mapboxgl.Marker({
+      draggable: true,
+      "color": "#b40219"
     })
         .setLngLat([lngM, latM])
         .addTo(this.map);
