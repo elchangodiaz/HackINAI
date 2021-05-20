@@ -29,6 +29,15 @@ export class MapComponent implements OnInit {
     });
     this.map.on('load', this.onLoad.bind(this));
     this.crearMarcador(this.lng, this.lat);
+    this.crearMarcador(-99.1541865, 19.4337377);
+    this.crearMarcador(-99.19631827085632, 19.170679706594115);
+    this.crearMarcador(-99.03498131170676, 19.125432736541228);
+    this.crearMarcador(-99.0198559717865, 19.25875656389354);
+    this.crearMarcador(-99.08035733146752, 19.33965037386581);
+    this.crearMarcador(-99.20388094081645, 19.284932466282896);
+    this.crearMarcador(-99.16102581104256, 19.365813329506835);
+
+
   }
 
   onLoad(){
