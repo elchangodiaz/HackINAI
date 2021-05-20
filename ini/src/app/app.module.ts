@@ -4,18 +4,26 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SalariosComponent } from './components/salarios/salarios.component';
+import { MapComponent } from './components/map/map.component';
+import { AppRoutingModule } from './app-routing.module';
+import { TableComponent } from './components/table/table.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SalariosComponent
+    SalariosComponent,
+    MapComponent,
+    TableComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     //HttpModule,
     //HttpClient,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
