@@ -10,6 +10,7 @@ import { TableComponent } from './components/table/table.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {FormsModule} from '@angular/forms';
 import { SalarioPuestoComponent } from './components/salario-puesto/salario-puesto.component';
+import { map, delay } from "rxjs/operators";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { SalarioPuestoComponent } from './components/salario-puesto/salario-pues
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SalarioPuestoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
