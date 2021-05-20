@@ -12,7 +12,7 @@ export class SalarioPuestoComponent implements OnInit {
   numeroPuestos: number[] = [];
   nombresPuestos: string[] = [];
   porAlcaldia: Map<string, number>[] = [];
-  public Labels = ['x>100000','90000-100000','80000-90000','70000-80000', '60000-70000','50000-60000','40000-50000','30000-40000','20000-30000','10000-20000','>10000'];
+  public Labels = ['+$100m','$90m-$100m','$80m-$90m','$70m-$80m', '$60m-$70m','$50m-$60m','$40m-$50m','$30m-$40m','$20m-$30m','$10Mm-$20m','-$10m'];
   public Data = [0,1,0,1,9,1,24,48,256,3578,9303];
   public doughnutChartType: string = 'doughnut';
   constructor(private filtro: FiltroPuesto, private salario: SalariosComponent) { }

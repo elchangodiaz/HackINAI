@@ -1,23 +1,24 @@
 <h1>Relación Salario - Puestos</h1>
-<div class="conteneor">
+
 <div class="tabla">
     <table>
     <tr>
         <td class="theader">SALDO DE LOS PUESTOS</td>
         <td class="theader">SALARIO </td>
     </tr>
-    <div *ngFor="let d of numeroPuestos; let i = index">
-        <tr>
-            <td class="theader">{{d}}</td>
-            <td class="theader">${{(numeroPuestos.length-i-1)*10000}} - ${{(numeroPuestos.length-i)*10000}} </td>
+    
+        <tr *ngFor="let d of numeroPuestos; let i = index">
+            <td class="tinfo">{{d}}</td>
+            <td class="tinfo">${{(numeroPuestos.length-i-1)*10000}} - ${{(numeroPuestos.length-i)*10000}} </td>
         </tr>
-    </div>
+    
 
 
 </table>
 </div>
+
 <div class="grafica" style = 'display: block'>
-    <canvas
+    <canvas style="height: 200px;"
     baseChart
     [data]="Data"
     [labels]="Labels"
@@ -27,7 +28,7 @@
     </canvas>
 
 </div>
-</div>
+
 <!--
 <script>
    /* window.onload = function() {
@@ -79,6 +80,3 @@
 
 </div> 
 -->
-
-
-<div>Fin long del perdido: {{numeroPuestos.length}}</div>

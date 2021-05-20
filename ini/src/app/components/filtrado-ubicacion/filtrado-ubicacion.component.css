@@ -1,0 +1,41 @@
+/*@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js');
+@import url('https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js');*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+table {
+    border-collapse: collapse;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+    margin:  10px auto auto 100px ;
+
+}
+.grafica{
+    position: absolute;
+    top: 800px;
+    right: 500px;
+    width: 50%;
+}
+
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 20px;
+}
+
+.theader {
+    background-color: rgb(255, 255, 255);
+    color: rgb(161, 161, 161);
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
+    font-weight: 600;
+    text-align: center;
+}
+.tinfo{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(136, 136, 136);
+    
+}

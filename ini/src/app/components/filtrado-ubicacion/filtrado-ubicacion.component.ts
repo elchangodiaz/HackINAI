@@ -16,14 +16,6 @@ export class FiltradoUbicacionComponent implements OnInit {
     this.transformarDatos();
   }
   transformarDatos() {
-    this.alcaldiaSalarios = this.filtro.transform(this.data);
-    console.log('length recibido: ',this.alcaldiaSalarios.length);
-    console.log('dato: ',this.alcaldiaSalarios[0][8]);
-    console.log('dato: ',this.alcaldiaSalarios[0][9]);
-    console.log('dato: ',this.alcaldiaSalarios[0][10]);
-    console.log('dato: ',this.alcaldiaSalarios[1][8]);
-    console.log('dato: ',this.alcaldiaSalarios[1][9]);
-    console.log('dato: ',this.alcaldiaSalarios[1][10]);
-    
+    this.alcaldiaSalarios = this.filtro.transform(this.data); 
   }
 }
