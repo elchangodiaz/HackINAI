@@ -15,20 +15,18 @@ export class SalariosComponent implements OnInit {
   constructor(private getcsv: getCsv, private t:TransformSalario) {}
 
   ngOnInit(): void {
-    this.getData();
-    this.sendSelected();//del combobox
+    this.prepararData();
   }
-  getData(){
+  //FALTA PREPARA PARA OTROS TRIMESTRES
+  prepararData(){
     this.getcsv.getInfo(this.urlTrimestre).subscribe(infos =>{
       const list = infos.split('\n');
       this.data = this.t.transform(list);
     })
   }
-
-  sendSelected(){
-    
+  getData(){
+    return this.data;
   }
-
 }
 
 
