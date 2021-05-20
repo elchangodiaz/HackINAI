@@ -4,14 +4,17 @@
 * {
     margin: 0;
 }
-.body2 {
+
+body {
     margin: auto;
     margin-top: 0%;
     width: 80vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    position: absolute;
+    position: relative;
 }
 
 .header img {
@@ -24,10 +27,8 @@
 }
 
 .navbar {
-    position: relative;
     background-color: #c52293;
     height: 60px;
-    top: 400px;
     display: flex;
     justify-content: space-between;
 }
@@ -46,7 +47,7 @@
 
 .navbar img {
     height: 80%;
-    margin: 6px auto auto 2.5%;
+    margin: 6px auto auto 3vw;
 }
 
 .navbar p {
@@ -59,20 +60,28 @@
 }
 
 table {
+    border-collapse: collapse;
     position: relative;
     margin: auto;
-    margin-top: 500px;
+    margin-top: 100px;
     font-family: 'Open Sans', sans-serif;
 }
 
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 20px;
+}
+
 .theader {
-    background-color: rgb(143, 173, 255);
-    color: white;
-    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    color: rgb(161, 161, 161);
+    font-size: small;
+    font-weight: 600;
     text-align: center;
 }
+
 @media (max-width: 1440px) {
-    .body2 {
+    body {
         margin-top: 0%;
         width: 100vw;
     }
