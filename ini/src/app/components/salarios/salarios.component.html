@@ -5,10 +5,10 @@
     <option value="puestos">Puestos</option>
     <option value="ubicacion">Ubicación</option>
   </select>
-</div>
+
 
 <div *ngIf="selected=='puestos'">
-  <button (click)="segundoPaso()">Buscar</button>
+  <button  (click)="segundoPaso() ">Buscar</button>
   <app-salario-puesto></app-salario-puesto>
 </div>
 
@@ -16,6 +16,7 @@
 <div *ngIf="selected=='ubicacion'">
   <button (click)="segundoPasoUbicacion()">Buscar</button>
   <app-filtrado-ubicacion></app-filtrado-ubicacion>
+</div>
 </div>
 <!--
   <div *ngFor="let d of data">

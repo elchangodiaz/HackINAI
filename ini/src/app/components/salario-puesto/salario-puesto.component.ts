@@ -22,7 +22,7 @@ export class SalarioPuestoComponent implements OnInit {
     this.transformarDatos();
   }
   transformarDatos() {
-    let temp = this.filtro.transform(this.data);
+    let temp = this.filtro.returnData();
     this.porAlcaldia = temp[0];
     this.numeroPuestos = temp[1];
     this.nombresPuestos = temp[2];

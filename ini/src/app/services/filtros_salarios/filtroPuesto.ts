@@ -49,13 +49,13 @@ export class FiltroPuesto {
     constructor() { }
     //12 16
     transform(texto: string[]) {
-        console.log('transformación de datos');
+        //this.inicializarArrays();
         this.llenarAlcaldias();
         //this.registros.push([]);
         texto.forEach((e: string) => {//para cada elemento separamos por comas y guardamos todo en un arreglo
             let indice;
             let temp = parseInt(String(e[16]).replace(/['"]+/g, ''));
-            if (temp>= 100000) {
+            if (temp >= 100000) {
                 indice = 0;
             } else if (temp >= 90000) {
                 indice = 1;
@@ -63,32 +63,32 @@ export class FiltroPuesto {
                 indice = 2;
             } else if (temp >= 70000) {
                 indice = 3;
-            } else if (temp  >= 60000) {
+            } else if (temp >= 60000) {
                 indice = 4;
-            } else if (temp  >= 50000) {
+            } else if (temp >= 50000) {
                 indice = 5;
-            } else if (temp  >= 40000) {
+            } else if (temp >= 40000) {
                 indice = 6;
             } else if (temp >= 30000) {
                 indice = 7;
             } else if (temp >= 20000) {
                 indice = 8;
-            } else if (temp  >= 10000) {
+            } else if (temp >= 10000) {
                 indice = 9;
             } else {
                 indice = 10;
             }
 
-           // console.log('indice: ',parseInt(String(e[16]).replace(/['"]+/g, '')));
+            // console.log('indice: ',parseInt(String(e[16]).replace(/['"]+/g, '')));
 
-            this.numeroPuestos[indice] = this.numeroPuestos[indice]+ 1;
+            this.numeroPuestos[indice] = this.numeroPuestos[indice] + 1;
             if (!this.checarNombre(e[12], indice)) {
                 this.nombresPuestos[indice].push(e[12]);
             }
             this.porAlcaldia[indice].set('Álvaro Obregón', Number(this.porAlcaldia[indice].get('Álvaro Obregón')) + 1);
 
         });
-        const resultado:any[] = []
+        const resultado: any[] = []
         resultado.push(this.porAlcaldia);
         resultado.push(this.numeroPuestos);
         resultado.push(this.nombresPuestos);
@@ -131,5 +131,53 @@ export class FiltroPuesto {
             e.set('Venustiano Carranza', 0);
             e.set('Xochimilco', 0);
         });
+    }
+    inicializarArrays() {
+        this.numeroPuestos = [
+            0, // > 100
+            0, // entre 90 - 100
+            0, // 80 - 90
+            0, // 70 - 80
+            0, // 60 - 70
+            0, // 50 - 60
+            0, // 40 - 50
+            0, // 30 - 40
+            0, // 20 - 30
+            0, // 10 - 20
+            0  // < 10 
+        ];
+        this.nombresPuestos = [
+            [''], // > 100
+            [''], // entre 90 - 100
+            [''], // 80 - 90
+            [''], // 70 - 80
+            [''], // 60 - 70
+            [''], // 50 - 60
+            [''], // 40 - 50
+            [''], // 30 - 40
+            [''], // 20 - 30
+            [''], // 10 - 20
+            ['']  // < 10 
+        ];
+        this.porAlcaldia = [
+            new Map<string, number>(), // > 100
+            new Map<string, number>(), // entre 90 - 100
+            new Map<string, number>(), // 80 - 90
+            new Map<string, number>(), // 70 - 80
+            new Map<string, number>(), // 60 - 70
+            new Map<string, number>(), // 50 - 60
+            new Map<string, number>(), // 40 - 50
+            new Map<string, number>(), // 30 - 40
+            new Map<string, number>(), // 20 - 30
+            new Map<string, number>(), // 10 - 20
+            new Map<string, number>()  // < 10 
+        ];
+    }
+    returnData(){
+        const resultado: any[] = []
+        resultado.push(this.porAlcaldia);
+        resultado.push(this.numeroPuestos);
+        resultado.push(this.nombresPuestos);
+        return resultado;
     }
 }

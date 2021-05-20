@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-        label {
+
+.container{
+ 
+  margin-top: 50px;
+  margin-left: ;
+  display: flex;
+  width: 10vw;
+  height: 10vh;
+
+
+}       
+
+label {
             font-family: 'Open Sans', sans-serif;
             margin: 10px;
         }
         
-        select {
+select {
             /* border-radius: 5px; */
             color: rgb(133, 133, 133);
             font-family: 'Open Sans', sans-serif;
@@ -15,11 +27,13 @@
             padding: 10px;
         }
 
-.salario{
-  position: relative;
-  top: 600px;
-  width: 200px;
+button{
+  background-color: rgb(233, 233, 233);
+  border: none;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px;
+  margin: 0px 0px 0px 5px;
 }
-.relativo{
-  position: relative;
-}
+button:hover{
+  background-color: rgb(204, 204, 204);}
