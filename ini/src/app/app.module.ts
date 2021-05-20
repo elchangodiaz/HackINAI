@@ -9,19 +9,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { TableComponent } from './components/table/table.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {FormsModule} from '@angular/forms';
-import { FiltrosSalatiosComponent } from './components/filtros-salatios/filtros-salatios.component';
-import { InicioComponent } from './components/inicio/inicio.component';
+import { SalarioPuestoComponent } from './components/salario-puesto/salario-puesto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SalariosComponent,
-    FiltrosSalatiosComponent,
-    InicioComponent,
     MapComponent,
     TableComponent,
-    NavBarComponent
+    NavBarComponent,
+    SalarioPuestoComponent
 
   ],
   imports: [
@@ -30,7 +28,6 @@ import { InicioComponent } from './components/inicio/inicio.component';
     //HttpClient,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
     FormsModule,
     AppRoutingModule
   ],
