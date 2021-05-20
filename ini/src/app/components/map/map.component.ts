@@ -9,10 +9,10 @@ import * as mapboxgl from 'mapbox-gl';
 })
 export class MapComponent implements OnInit {
   //37.7996462,-122.2526912
-//  lat = 19.4337377;
-//  lng = -99.1541865;
-  lat = 37.7996462;
-  lng = -122.2526912;
+  lat = 19.4337377;
+  lng = -99.1541865;
+  //lat = 37.7996462;
+  //lng = -122.2526912;
   map!: mapboxgl.Map;
 
   constructor() { }
@@ -28,6 +28,7 @@ export class MapComponent implements OnInit {
       zoom: 8.6
     });
     this.map.on('load', this.onLoad.bind(this));
+    this.crearMarcador(this.lng, this.lat);
   }
 
   onLoad(){
@@ -78,5 +79,19 @@ export class MapComponent implements OnInit {
     ]
     }
     });
+  }
+
+  crearMarcador(lngM: number, latM: number) {
+    const marker = new mapboxgl.Marker({
+      draggable: true
+    })
+        .setLngLat([lngM, latM])
+        .addTo(this.map);
+
+        marker.on('drag', () => {
+            console.log(marker.getLngLat()
+            )
+        })
+
   }
 }
