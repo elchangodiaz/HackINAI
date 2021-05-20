@@ -8,7 +8,6 @@ import { MapComponent } from './components/map/map.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TableComponent } from './components/table/table.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import {MatSelectModule} from '@angular/material/select';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -26,7 +25,6 @@ import {FormsModule} from '@angular/forms';
     //HttpClient,
     HttpClientModule,
     AppRoutingModule,
-    MatSelectModule,
     FormsModule
   ],
   providers: [],

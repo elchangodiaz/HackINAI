@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {getCsv} from '../../services/getCsv';
 import {TransformSalario} from '../../services/transformSalarios';
-import {MatSelectModule} from '@angular/material/select';
 
 @Component({
   selector: 'app-salarios',
