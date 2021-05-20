@@ -6,12 +6,17 @@ import { HeaderComponent } from './components/header/header.component';
 import { SalariosComponent } from './components/salarios/salarios.component';
 import {MatSelectModule} from '@angular/material/select';
 import {FormsModule} from '@angular/forms';
+import { FiltrosSalatiosComponent } from './components/filtros-salatios/filtros-salatios.component';
+import { AppRoutingModule } from './app-routing.module';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SalariosComponent
+    SalariosComponent,
+    FiltrosSalatiosComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +24,8 @@ import {FormsModule} from '@angular/forms';
     //HttpClient,
     HttpClientModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
