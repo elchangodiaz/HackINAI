@@ -8,7 +8,7 @@ import { SalariosComponent } from './components/salarios/salarios.component'
 
 const routes: Routes = [
   { path: 'mapComp', component: MapComponent },
-  { path: 'table', component: TableComponent },
+  { path: '', component: TableComponent },
   { path: 'salarios', component: SalariosComponent }
 
 ];
