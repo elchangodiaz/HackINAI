@@ -1,4 +1,17 @@
-<h1>Salarios</h1>
+<div class="container " appearance="fill">
+  <label>Select</label>
+  <select [(ngModel)]="selected">
+    <option>None</option>
+    <option value="puestos">Puestos</option>
+    <option value="ubicacion">Ubicación</option>
+  </select>
+</div>
+
+<p>You selected: {{selected}}</p>
+<!--
+  <h1>Salarios</h1>
  <div *ngFor= "let d of data">
   <p>{{d[1]}}</p>
-</div> 
+</div>
+-->
+ 

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {getCsv} from '../../services/getCsv';
 import {TransformSalario} from '../../services/transformSalarios';
+import {MatSelectModule} from '@angular/material/select';
+
 @Component({
   selector: 'app-salarios',
   templateUrl: './salarios.component.html',
@@ -8,6 +10,7 @@ import {TransformSalario} from '../../services/transformSalarios';
 })
 export class SalariosComponent implements OnInit {
   data: any = [];
+  selected = 'puestos';
   urlTrimestre = 'https://raw.githubusercontent.com/Erick2G/Hack2021/main/csvs/primer_trim_concurso.csv';
   constructor(private getcsv: getCsv, private t:TransformSalario) {}
 
@@ -19,10 +22,7 @@ export class SalariosComponent implements OnInit {
       const list = infos.split('\n');
       this.data = this.t.transform(list);
     })
-
-    
   }
-
 }
 
 
