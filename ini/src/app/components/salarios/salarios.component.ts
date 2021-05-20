@@ -15,6 +15,7 @@ export class SalariosComponent implements OnInit {
 
   ngOnInit(): void {
     this.getData();
+    this.sendSelected();//del combobox
   }
   getData(){
     this.getcsv.getInfo(this.urlTrimestre).subscribe(infos =>{
@@ -22,6 +23,11 @@ export class SalariosComponent implements OnInit {
       this.data = this.t.transform(list);
     })
   }
+
+  sendSelected(){
+    
+  }
+
 }
 
 

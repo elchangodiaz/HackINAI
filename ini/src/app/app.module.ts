@@ -9,15 +9,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { TableComponent } from './components/table/table.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {FormsModule} from '@angular/forms';
+import { FiltrosSalatiosComponent } from './components/filtros-salatios/filtros-salatios.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SalariosComponent,
+    FiltrosSalatiosComponent,
+    InicioComponent,
     MapComponent,
     TableComponent,
     NavBarComponent
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,9 @@ import {FormsModule} from '@angular/forms';
     //HttpClient,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
