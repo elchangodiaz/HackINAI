@@ -10,6 +10,7 @@ export class FiltrosSalatiosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

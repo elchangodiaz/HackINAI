@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "ini"
+  "defaultProject": "ini",
+  "cli": {
+    "analytics": "a2d1f705-44ef-466c-9092-1fd05929c5ba"
+  }
 }
