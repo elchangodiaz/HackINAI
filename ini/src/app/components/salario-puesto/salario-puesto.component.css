@@ -6,9 +6,11 @@
 
 
 table {
+    position: absolute;
     border-collapse: collapse;
     position: relative;
-    margin: auto;
+    left: 5vw;
+    right: 10px;
     margin-top: 100px;
     font-family: 'Open Sans', sans-serif;
     margin:  10px auto auto 100px ;
@@ -17,7 +19,7 @@ table {
 .grafica{
     position: absolute;
     top: 800px;
-    right: 500px;
+    right: 13vw;
     width: 50%;
 }
 

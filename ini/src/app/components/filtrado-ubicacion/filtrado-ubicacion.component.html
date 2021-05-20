@@ -1,4 +1,4 @@
-<h1>Relación Salario - Puestos</h1>
+<h3>VACANTES POR ALCALDÍA, CLASIFICADAS POR RANGO DE SALARIOS</h3>
 
 <div class="tabla">
     <table>
@@ -17,6 +17,7 @@
         <td class="theader">-$10m</td>
     </tr>
         <tr *ngFor="let d of alcaldiaSalarios; let i = index">
+            <td class="tinfo">{{nombres[i]}}</td>
             <td class="tinfo">{{d[0]}}</td>
             <td class="tinfo">{{d[1]}} </td>
             <td class="tinfo">{{d[2]}}</td>
@@ -32,11 +33,11 @@
 </table>
 </div>
 
-<div class="grafica" style = 'display: block'>
+<div style = 'display: block'>
     <canvas style="height: 200px;"
     baseChart
-    [data]=""
-    [labels]="Labels"
+    [data]="Data"
+    [labels]="nombres"
     [chartType] = "doughnutChartType"
     >
     </canvas>
