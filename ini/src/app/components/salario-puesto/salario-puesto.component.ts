@@ -8,7 +8,7 @@ import { SalariosComponent } from '../salarios/salarios.component';
   styleUrls: ['./salario-puesto.component.css']
 })
 export class SalarioPuestoComponent implements OnInit {
-  data: string[] = ['l', 'o'];
+  data: string[] = [];
   numeroPuestos: number[] = [];
   nombresPuestos: string[] = [];
   porAlcaldia: Map<string, number>[] = [];
@@ -22,7 +22,7 @@ export class SalarioPuestoComponent implements OnInit {
     this.transformarDatos();
   }
   transformarDatos() {
-    let temp = this.filtro.returnData();
+    let temp = this.filtro.transform(this.data);
     this.porAlcaldia = temp[0];
     this.numeroPuestos = temp[1];
     this.nombresPuestos = temp[2];

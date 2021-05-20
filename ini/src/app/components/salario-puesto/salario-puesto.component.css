@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 h3{
-    margin-left: 10vw;
+    margin-left: 3vw;
     font-family: 'Open Sans', sans-serif;
     font-size: x-large;
     width: 100vw;
@@ -14,11 +14,11 @@ table {
     position: absolute;
     border-collapse: collapse;
     position: relative;
-    left: 5vw;
+    left: 3vw;
     right: 10px;
-    margin-top: 100px;
+    
     font-family: 'Open Sans', sans-serif;
-    margin:  10px auto auto 100px ;
+    margin:  10px auto auto 3vw ;
 
 }
 .grafica{
@@ -46,7 +46,7 @@ td {
     color: rgb(136, 136, 136);
     
 }
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
     h3{
         margin-left: 2vw;
         

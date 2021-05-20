@@ -7,16 +7,20 @@
   </select>
 
 
-<div *ngIf="selected=='puestos'">
-  <button  (click)="segundoPaso() ">Buscar</button>
-  <app-salario-puesto></app-salario-puesto>
-</div>
+  <div *ngIf="selected=='puestos'">
+    <button  (click)="segundoPaso()" (click)="myFunction()" >Buscar</button>
+    <!-- <div id="myDIV" class="desaparecer">
+      aaaa
+    </div> -->
+    <app-salario-puesto *ngIf="display"></app-salario-puesto>
+  </div>
 
 
-<div *ngIf="selected=='ubicacion'">
-  <button (click)="segundoPasoUbicacion()">Buscar</button>
-  <app-filtrado-ubicacion></app-filtrado-ubicacion>
-</div>
+
+  <div *ngIf="selected=='ubicacion'">
+    <button (click)="segundoPasoUbicacion()" (click)="myFunction2()">Buscar</button>
+    <app-filtrado-ubicacion *ngIf="display"></app-filtrado-ubicacion>
+  </div>
 </div>
 <!--
   <div *ngFor="let d of data">

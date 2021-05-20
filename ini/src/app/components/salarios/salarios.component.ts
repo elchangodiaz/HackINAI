@@ -17,7 +17,23 @@ export class SalariosComponent implements OnInit {
   porAlcaldia: Map<string, number>[] = [];
   selected = 'puestos';
   urlTrimestre = 'https://raw.githubusercontent.com/Erick2G/Hack2021/main/csvs/primer_trim_concurso.csv';
+  
+  
+  display = false;
+  display2 = false;
+
+  myFunction () {
+    this.display = true;
+    // this.display = !this.display;
+  }
+  myFunction2 () {
+    this.display2 = true;
+    // this.display = !this.display;
+  }
+  
   constructor(private getcsv: getCsv, private t: TransformSalario, private filtro: FiltroPuesto, private filtroUbicacion: FiltroUbicacion) { }
+
+
 
   ngOnInit(): void {
     this.prepararData();
